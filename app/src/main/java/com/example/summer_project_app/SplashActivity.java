@@ -1,15 +1,14 @@
 package com.example.summer_project_app;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.res.ResourcesCompat;
-
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.res.ResourcesCompat;
 
 public class SplashActivity extends AppCompatActivity {
     private TextView appName;
@@ -19,7 +18,7 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         appName=findViewById(R.id.app_name);
-        Animation anim = AnimationUtils.loadAnimation( this, R.anim.myanim );
+        Animation anim = AnimationUtils.loadAnimation(this, R.anim.myanim);
         appName.setAnimation(anim);
         new Thread(){
             @Override
@@ -32,6 +31,7 @@ public class SplashActivity extends AppCompatActivity {
                 }
                 Intent intent = new Intent( SplashActivity.this,MainActivity.class);
                 startActivity(intent);
+                SplashActivity.this.finish();
             }
 
             }.start();

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:theme="@style/LoginTheme"
-    android:context=".LoginActivity">
+    tools:context=".LoginActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -51,6 +51,7 @@
         android:ems="10"
         android:hint="E-Mail ID"
         android:inputType="textEmailAddress"
+        android:minHeight="48dp"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

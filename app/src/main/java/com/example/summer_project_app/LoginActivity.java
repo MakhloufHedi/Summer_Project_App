@@ -9,7 +9,8 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class LoginActivity extends AppCompatActivity {
-    private EditText email,password;
+    private EditText email;
+    private EditText password;
     private Button loginBut ;
     private TextView forg_Pass, signup;
     @Override

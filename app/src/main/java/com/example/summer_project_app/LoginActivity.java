@@ -18,7 +18,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         email=findViewById(R.id.email);
         pass=findViewById(R.id.password);
-        loginB=findViewById(R.id.loginB);
+        loginB=findViewById(R.id.LoginB);
         forgotPassB=findViewById(R.id.forgot_pass);
         signupB=findViewById(R.id.signupB);
 
@@ -35,11 +35,11 @@ public class LoginActivity extends AppCompatActivity {
                 return false;
             }
             return true;
-        }
+        };
         private void login()
         {
 
-        }
+        };
         loginB.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){

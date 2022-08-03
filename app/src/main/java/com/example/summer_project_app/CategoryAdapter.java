@@ -33,8 +33,8 @@ public class CategoryAdapter extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         View myView;
-        if (myView == null) {
-            view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.cat_item_layout, viewGroup, false);
+        if (view == null) {
+            myView = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.cat_item_layout, viewGroup, false);
         } else
         {
             myView = view;

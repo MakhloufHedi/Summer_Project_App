@@ -17,7 +17,12 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+
         appName=findViewById(R.id.app_name);
+
+        // Typeface typeface = ResourcesCompat.getFont(this, R.font.blacklist);
+        // appName.setTypeface(typeface;
+
         Animation anim = AnimationUtils.loadAnimation(this, R.anim.myanim);
         appName.setAnimation(anim);
         new Thread(){

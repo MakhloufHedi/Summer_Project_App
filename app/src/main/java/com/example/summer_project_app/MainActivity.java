@@ -27,11 +27,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.summer_project_app.databinding.ActivityMainBinding;
 
-public class MainActivity<bottomNavigationView> extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener() {
+public class MainActivity<bottomNavigationView> extends AppCompatActivity
+        implements NavigationView.OnNavigationItemSelectedListener {
 
     private BottomNavigationView bottomNavigationView;
     private FrameLayout main_frame;
-    Toolbar toolbar=(Toolbar) findViewById(R.id.toolbar);
+
     private void setFragment(Fragment fragment)
     {
         FragmentTransaction transaction=getSupportFragmentManager().beginTransaction();
@@ -40,36 +41,38 @@ public class MainActivity<bottomNavigationView> extends AppCompatActivity implem
     }
     private BottomNavigationView.OnNavigationItemSelectedListener onNavigationItemSelectedListener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            switch (MenuItem.getItemId())
-            {
-                case R.id.nav_home:
-                    setFragment(new CategoryFragment());
-                    return true;
-                case R.id.nav_leaderboard:
-                    setFragment(new LeaderBoardFragment());
-                    return true;
-                case R.id.nav_account:
-                    setFragment(new AccountFragment());
-                    return true;
+                @Override
+                public  boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch (menuItem.getItemId())
+                {
+                    case R.id.nav_home:
+                        setFragment(new CategoryFragment());
+                        return true;
+                    case R.id.nav_leaderboard:
+                        setFragment(new LeaderBoardFragment());
+                        return true;
+                    case R.id.nav_account:
+                        setFragment(new AccountFragment());
+                        return true;
+                }
+                return false;
             }
-            return false;
-        }
-        };
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        androidx.appcompat.widget.Toolbar toolbar;
+        toolbar = (androidx.appcompat.widget.Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
 
-        bottomNavigationView.setOnNavigationItemReselectedListener(onNavigationItemSelectedListener);
+        bottomNavigationView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar,
-                "open navigation drawer", "close navigation drawer");
+              R.string.navigation_drawer_open  , R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
@@ -77,7 +80,6 @@ public class MainActivity<bottomNavigationView> extends AppCompatActivity implem
         setFragment(new CategoryFragment());
 
     }
-
 
 
     @Override
@@ -92,18 +94,24 @@ public class MainActivity<bottomNavigationView> extends AppCompatActivity implem
 
 
     @Override
-    public boolean onNavigationItamSelected(MenuItem item ) {
+    public boolean onNavigationItemSelected(MenuItem item ) {
         int id = item.getItemId();
         if(id== androidx.navigation.ui.R.id.nav_controller_view_tag){
             //handle the camera action
         } else if (id == R.id.nav_gallery){}
         else if (id == R.id.nav_slideshow){}
-        else if (id == R.id.nav_m){}
-        else if (id == R.id.nav_share){}
-        else if (id == R.id.nav_send){}
+//        else if (id == R.id.nav_m){}
+//        else if (id == R.id.nav_share){}
+//        else if (id == R.id.nav_send){}
         DrawerLayout drawerLayout=(DrawerLayout) findViewById(R.id.drawer_layout);
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;
     }
 
+
+
+    @Override
+    public void onPointerCaptureChanged(boolean hasCapture) {
+        super.onPointerCaptureChanged(hasCapture);
+    }
 }

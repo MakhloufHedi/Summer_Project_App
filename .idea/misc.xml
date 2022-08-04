@@ -9,16 +9,17 @@
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Summer_Project_App/app/src/main/res/drawable/ic_menu_camera.xml" value="0.1685" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Summer_Project_App/app/src/main/res/drawable/ic_menu_gallery.xml" value="0.1685" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Summer_Project_App/app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.1685" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Summer_Project_App/app/src/main/res/drawable/main_background.xml" value="0.1685" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Summer_Project_App/app/src/main/res/drawable/main_background.xml" value="0.16" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Summer_Project_App/app/src/main/res/drawable/round_corner_botton.xml" value="0.1685" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Summer_Project_App/app/src/main/res/drawable/side_nav_bar.xml" value="0.1685" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Summer_Project_App/app/src/main/res/layout/activity_login.xml" value="0.18" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Summer_Project_App/app/src/main/res/layout/activity_main.xml" value="0.1703125" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Summer_Project_App/app/src/main/res/layout/activity_sign_up.xml" value="0.1" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Summer_Project_App/app/src/main/res/layout/activity_splash.xml" value="0.1703125" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Summer_Project_App/app/src/main/res/layout/app_bar_main.xml" value="0.1" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Summer_Project_App/app/src/main/res/layout/cat_item_layout.xml" value="0.1703125" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Summer_Project_App/app/src/main/res/layout/content_main.xml" value="0.1" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Summer_Project_App/app/src/main/res/layout/activity_sign_up.xml" value="0.33" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Summer_Project_App/app/src/main/res/layout/activity_splash.xml" value="0.21" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Summer_Project_App/app/src/main/res/layout/app_bar_main.xml" value="0.18" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Summer_Project_App/app/src/main/res/layout/cat_item_layout.xml" value="0.21" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Summer_Project_App/app/src/main/res/layout/content_main.xml" value="0.18" />
+        <entry key="..\:/Users/ASUS/AndroidStudioProjects/Summer_Project_App/app/src/main/res/layout/dialogue_layout.xml" value="0.22" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Summer_Project_App/app/src/main/res/layout/fragment_account.xml" value="0.1703125" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Summer_Project_App/app/src/main/res/layout/fragment_category.xml" value="0.1703125" />
         <entry key="..\:/Users/ASUS/AndroidStudioProjects/Summer_Project_App/app/src/main/res/layout/fragment_gallery.xml" value="0.1703125" />

@@ -27,7 +27,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.summer_project_app.databinding.ActivityMainBinding;
 
-public class MainActivity<bottomNavigationView> extends AppCompatActivity
+public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private BottomNavigationView bottomNavigationView;
@@ -35,10 +35,11 @@ public class MainActivity<bottomNavigationView> extends AppCompatActivity
 
     private void setFragment(Fragment fragment)
     {
-        FragmentTransaction transaction=getSupportFragmentManager().beginTransaction();
+        FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(main_frame.getId(),fragment);
         transaction.commit();
     }
+
     private BottomNavigationView.OnNavigationItemSelectedListener onNavigationItemSelectedListener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
                 @Override
@@ -63,9 +64,11 @@ public class MainActivity<bottomNavigationView> extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        androidx.appcompat.widget.Toolbar toolbar;
-        toolbar = (androidx.appcompat.widget.Toolbar) findViewById(R.id.toolbar);
+        androidx.appcompat.widget.Toolbar toolbar = (androidx.appcompat.widget.Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottom_nav_bar);
+        main_frame = (FrameLayout) findViewById(R.id.main_frame);
 
 
         bottomNavigationView.setOnNavigationItemSelectedListener(onNavigationItemSelectedListener);
@@ -75,8 +78,10 @@ public class MainActivity<bottomNavigationView> extends AppCompatActivity
               R.string.navigation_drawer_open  , R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
+
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
         setFragment(new CategoryFragment());
 
     }
@@ -84,9 +89,9 @@ public class MainActivity<bottomNavigationView> extends AppCompatActivity
 
     @Override
     public void onBackPressed(){
-        DrawerLayout drawerLayout=(DrawerLayout) findViewById(R.id.drawer_layout);
-        if(drawerLayout.isDrawerOpen(GravityCompat.START)) {
-            drawerLayout.closeDrawer(GravityCompat.START);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        if(drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
         } else {
             super.onBackPressed();
         }
@@ -96,15 +101,17 @@ public class MainActivity<bottomNavigationView> extends AppCompatActivity
     @Override
     public boolean onNavigationItemSelected(MenuItem item ) {
         int id = item.getItemId();
-        if(id== androidx.navigation.ui.R.id.nav_controller_view_tag){
+
+        if(id == androidx.navigation.ui.R.id.nav_controller_view_tag){
             //handle the camera action
         } else if (id == R.id.nav_gallery){}
-        else if (id == R.id.nav_slideshow){}
+          else if (id == R.id.nav_slideshow){}
 //        else if (id == R.id.nav_m){}
 //        else if (id == R.id.nav_share){}
 //        else if (id == R.id.nav_send){}
-        DrawerLayout drawerLayout=(DrawerLayout) findViewById(R.id.drawer_layout);
-        drawerLayout.closeDrawer(GravityCompat.START);
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
         return true;
     }
 
